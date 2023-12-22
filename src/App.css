@@ -1,0 +1,37 @@
+
+.form-container{
+  display: flex;
+  width: 30rem;
+  margin: 2.2rem 1.5rem;
+  border: 1px solid;
+  height: 20rem;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.form-container input{
+  margin: 5px 2px;
+  width: 26rem;
+}
+.form-container .btn{
+  margin: 5px 2px;
+  width: 26rem;
+  border: 2px solid;
+  background-color: orangered;
+ 
+}
+
+.veiw-container{
+
+ width: 30rem;
+ margin: -375px 656px;
+ height: 150px;
+ 
+}
+
+.heading{
+  margin: 0px 150px;
+  color: red;
+}
+
