@@ -18,15 +18,17 @@
   margin: 5px 2px;
   width: 26rem;
   border: 2px solid;
-  background-color: orangered;
  
 }
+
+
 
 .veiw-container{
 
  width: 30rem;
  margin: -375px 656px;
  height: 150px;
+ text-align: center;
  
 }
 
