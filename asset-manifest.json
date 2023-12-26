@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/surp0507/workshop-drive.git/static/css/main.c84a5f23.css",
+    "main.js": "/surp0507/workshop-drive.git/static/js/main.9c0bfd76.js",
+    "index.html": "/surp0507/workshop-drive.git/index.html",
+    "main.c84a5f23.css.map": "/surp0507/workshop-drive.git/static/css/main.c84a5f23.css.map",
+    "main.9c0bfd76.js.map": "/surp0507/workshop-drive.git/static/js/main.9c0bfd76.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c84a5f23.css",
+    "static/js/main.9c0bfd76.js"
+  ]
+}
