@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/workshop-drive/static/css/main.c84a5f23.css",
-    "main.js": "/workshop-drive/static/js/main.071a99e7.js",
+    "main.js": "/workshop-drive/static/js/main.1415109c.js",
     "index.html": "/workshop-drive/index.html",
     "main.c84a5f23.css.map": "/workshop-drive/static/css/main.c84a5f23.css.map",
-    "main.071a99e7.js.map": "/workshop-drive/static/js/main.071a99e7.js.map"
+    "main.1415109c.js.map": "/workshop-drive/static/js/main.1415109c.js.map"
   },
   "entrypoints": [
     "static/css/main.c84a5f23.css",
-    "static/js/main.071a99e7.js"
+    "static/js/main.1415109c.js"
   ]
 }
