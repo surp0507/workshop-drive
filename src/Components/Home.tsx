@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { FaTrashAlt } from 'react-icons/fa'
-import { Table } from 'react-bootstrap'
-import Button from 'react-bootstrap/Button';
+import { Table ,Button} from 'react-bootstrap'
 import  useCustom  from './useCustom';
 
 type state = {
@@ -20,7 +19,7 @@ const Home:React.FC = () => {
 
   const [books, setBooks] = useCustom<Books[]>("books",[]);
   const [value, setValue] = useState<state>({ title: "", author: "", price: "" })
-  const [show, setShow] = useState<boolean>(false)
+  // const [show, setShow] = useState<boolean>(false)
   const [isEditId, setIsEditId] = useState<number>()
 
 
@@ -29,7 +28,7 @@ const Home:React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (show) {
+    if (isEditId) {
       const updatedBooks = books?.map((item: Books) =>{ 
         if(item.id === isEditId){
          return { 
@@ -43,12 +42,13 @@ const Home:React.FC = () => {
      
       setBooks(updatedBooks)
       setValue({ title: "", author: "", price: "" })
-      setShow(false)
+      setIsEditId(undefined)
     } else {
       const { title, author, price } = value
       if (title !== "" && author !== "" && price !== "") {
         setBooks((prevBook)=>[...(prevBook??[]), { id: Math.random(), title: title, author: author, price: price }])
         setValue({ title: "", author: "", price: "" })
+        setIsEditId(undefined)
       }
       else {
         alert("please enter the value!")
@@ -67,7 +67,6 @@ const Home:React.FC = () => {
     const { title, author, price, id } = data
     setValue({ ...value, title: title, author: author, price: price })
     setIsEditId(id)
-    setShow(true)
   }
 
   return (
@@ -83,7 +82,7 @@ const Home:React.FC = () => {
             <input value={value?.author} type="text" className="form-control" onChange={(e) => setValue({ ...value, author: e.target.value })} />
             <label >price</label>
             <input value={value?.price} type="text" className="form-control" onChange={(e) => setValue({ ...value, price: e.target.value })} />
-            {show ?
+            {isEditId ?
               <Button
                 type="submit"
                 variant="outline-primary"
@@ -116,7 +115,7 @@ const Home:React.FC = () => {
                   <td>{book.title}</td>
                   <td>{book.author}</td>
                   <td>{book.price}</td>
-                  <td><FaTrashAlt onClick={() => deleteBook(book.id)} /></td>
+                  <td><Button onClick={() => deleteBook(book.id)} size="sm" disabled={isEditId!==undefined}> Delete</Button></td>
                   <td>
                     <Button variant="outline-primary" size="sm" onClick={() => editeBook(book)}>
                       Edite
