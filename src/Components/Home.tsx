@@ -99,8 +99,8 @@ const Home:React.FC = () => {
         </div>
         <div className="veiw-container">
           <h5 className="text-center heading my-4" >view books</h5>
-          {books?.length  ? books?.map((book: any) => (
-            <Table className="table" key={book.id}>
+         
+            <Table className="table" >
               <thead>
                 <tr>
                   <th scope="col">Title</th>
@@ -110,7 +110,8 @@ const Home:React.FC = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr >
+              {books?.length  ? books?.map((book: any) => (
+                <tr key={book.id}>
 
                   <td>{book.title}</td>
                   <td>{book.author}</td>
@@ -122,9 +123,10 @@ const Home:React.FC = () => {
                     </Button>
                   </td>
                 </tr>
+                 )):<span style={{textAlign:"center"}}>No Data!</span>}
               </tbody>
             </Table>
-          )):<span style={{textAlign:"center"}}>No Data!</span>}
+         
         </div>
 
       </div>
