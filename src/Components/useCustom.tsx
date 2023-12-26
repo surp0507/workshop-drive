@@ -18,7 +18,7 @@ const useCustom = <T,>(key:string,initialValue?:T):ReturnType<T> => {
       if(books){
         localStorage.setItem(key,JSON.stringify(books))
       }
-    },[books])
+    },[key,books])
 
 
   return [books,setBooks]

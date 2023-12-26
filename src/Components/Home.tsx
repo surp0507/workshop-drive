@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { FaTrashAlt } from 'react-icons/fa'
 import { Table ,Button} from 'react-bootstrap'
 import  useCustom  from './useCustom';
 
@@ -19,7 +18,6 @@ const Home:React.FC = () => {
 
   const [books, setBooks] = useCustom<Books[]>("books",[]);
   const [value, setValue] = useState<state>({ title: "", author: "", price: "" })
-  // const [show, setShow] = useState<boolean>(false)
   const [isEditId, setIsEditId] = useState<number>()
 
 
